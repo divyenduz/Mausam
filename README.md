@@ -29,3 +29,8 @@ Simple Weather App
 * Improve UX
 * Implement Caching
 * Publishing to Play Store
+
+# License
+
+The MIT License (MIT)
+Copyright (c) 2015 Divyendu Singh
