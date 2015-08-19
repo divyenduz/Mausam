@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 71a12839d68b3dfc7d8e54a89e26837cc3361854 Divyendu Singh <divyendusingh@Divyendus-Mac-mini.local> 1438458031 +0530	commit (initial): init with .gitignore
-71a12839d68b3dfc7d8e54a89e26837cc3361854 3cd3266839bb677c591d4db8774e5142606742f4 Divyendu Singh <divyendusingh@Divyendus-Mac-mini.local> 1438458154 +0530	commit: Project Structure
-3cd3266839bb677c591d4db8774e5142606742f4 fbaa475323c05ec5d02d692d809420c7eeed204e Divyendu Singh <divyendusingh@Divyendus-Mac-mini.local> 1438458537 +0530	commit: include required libs
-fbaa475323c05ec5d02d692d809420c7eeed204e e5a3dac3407dd4180176490a7c3ddde2f46d5ce0 Divyendu Singh <divyendu.z@gmail.com> 1438458592 +0530	commit (amend): include required libs
-e5a3dac3407dd4180176490a7c3ddde2f46d5ce0 2300f76a47d4f4215ddc84926eaac53299fddd0a Divyendu Singh <divyendu.z@gmail.com> 1438460897 +0530	merge dev: Fast-forward
-2300f76a47d4f4215ddc84926eaac53299fddd0a 3111a4784dd79c6d45b1d887f9c0ea8ebc347e8e Divyendu Singh <divyendu.z@gmail.com> 1439933076 +0530	merge dev: Fast-forward
-3111a4784dd79c6d45b1d887f9c0ea8ebc347e8e 90103a9a5dc8ae747ca4cc17f15e8e0fd0a6e447 Divyendu Singh <divyendu.z@gmail.com> 1440007042 +0530	merge dev: Fast-forward
