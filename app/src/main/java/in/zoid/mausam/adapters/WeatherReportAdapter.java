@@ -40,8 +40,10 @@ public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdap
         String dateString = formatter.format(new Date(created * 1000L));
 
         holder.dayTextView.setText(String.valueOf(dateString));
-        holder.maxTempTextView.setText(String.valueOf(report.getTemp().getMax()));
-        holder.minTempTextView.setText(String.valueOf(report.getTemp().getMin()));
+        String max = String.valueOf(report.getTemp().getMax());
+        String min = String.valueOf(report.getTemp().getMin());
+        holder.maxTempTextView.setText(String.valueOf((max.length() == 4 ? max + "0" : max) + " \u2103"));
+        holder.minTempTextView.setText(String.valueOf((min.length() == 4 ? min + "0" : min) + " \u2103"));
     }
 
     @Override
