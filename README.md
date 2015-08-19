@@ -28,3 +28,4 @@ Simple Weather App
 
 * Improve UX
 * Implement Caching
+* Publishing to Play Store
