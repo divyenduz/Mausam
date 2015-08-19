@@ -33,7 +33,6 @@ public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdap
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         WeatherDataComplex.WeatherReport report = mData.getList().get(position);
-        holder.cityTextView.setText(mData.getCity().getName());
 
         long created = report.getDt();
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM", Locale.US);
@@ -53,14 +52,12 @@ public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdap
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView cityTextView;
         public TextView dayTextView;
         public TextView maxTempTextView;
         public TextView minTempTextView;
 
         public ViewHolder(View view) {
             super(view);
-            cityTextView = (TextView) view.findViewById(R.id.cityTextView);
             dayTextView = (TextView) view.findViewById(R.id.dayTextView);
             maxTempTextView = (TextView) view.findViewById(R.id.maxTempTextView);
             minTempTextView = (TextView) view.findViewById(R.id.minTempTextView);

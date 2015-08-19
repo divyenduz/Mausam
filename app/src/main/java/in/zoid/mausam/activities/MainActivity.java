@@ -84,6 +84,7 @@ public class MainActivity extends BaseActivity implements
         service.getWeatherDataByCityName(lat, lon, new Callback<WeatherDataComplex.WeatherData>() {
             @Override
             public void success(WeatherDataComplex.WeatherData data, Response response) {
+                setTitle("Mausam @" + " " + data.getCity().getName() + " (" + data.getCity().getCountry() + ")");
                 pager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), data));
             }
 
@@ -120,17 +121,17 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-        Log.i(TAG, "onStatusChanged: " + provider.toString() + " " + status + " " + extras.toString());
+        Log.i(TAG, "onStatusChanged: " + provider + " " + status + " " + extras.toString());
     }
 
     @Override
     public void onProviderEnabled(String provider) {
-        Log.i(TAG, "onProviderEnabled: " + provider.toString());
+        Log.i(TAG, "onProviderEnabled: " + provider);
     }
 
     @Override
     public void onProviderDisabled(String provider) {
-        Log.e(TAG, "onProviderDisabled: " + provider.toString());
+        Log.e(TAG, "onProviderDisabled: " + provider);
     }
 
     @Override
