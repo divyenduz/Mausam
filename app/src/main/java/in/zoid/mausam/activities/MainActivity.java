@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void onConnected(Bundle bundle) {
         LocationRequest mLocationRequest = LocationRequest.create();
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_LOW_POWER);
         mLocationRequest.setInterval(60000 * 60); // Update location every hour
 
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
