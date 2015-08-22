@@ -39,7 +39,6 @@ public class MainActivity extends BaseActivity implements
 
     OpenWeatherMapService service;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v(TAG, "Mode: " + BuildConfig.BUILD_TYPE);
@@ -58,6 +57,9 @@ public class MainActivity extends BaseActivity implements
         buildGoogleApiClient();
     }
 
+    /**
+     * Lifecycle method. GoogleApiClient is connected in this part.
+     */
     @Override
     protected void onStart() {
         super.onStart();
@@ -65,6 +67,9 @@ public class MainActivity extends BaseActivity implements
         mGoogleApiClient.connect();
     }
 
+    /**
+     * Lifecycle method. GoogleApiClient is disconnected in this part.
+     */
     @Override
     protected void onStop() {
         // Disconnecting the client invalidates it.
@@ -72,6 +77,10 @@ public class MainActivity extends BaseActivity implements
         super.onStop();
     }
 
+    /**
+     * Method is called onCreate() in lifecycle. It builds a GoogleApiClient and tells it to use
+     * LocationServices.API
+     */
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -95,6 +104,11 @@ public class MainActivity extends BaseActivity implements
         });
     }
 
+    /**
+     * GoogleApiClient onConnected() callback. Called when GoogleApiClient is able to connect to
+     * respective API
+     * @param bundle N/A
+     */
     @Override
     public void onConnected(Bundle bundle) {
         LocationRequest mLocationRequest = LocationRequest.create();
