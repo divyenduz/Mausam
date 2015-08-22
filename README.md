@@ -24,11 +24,11 @@ Simple Weather App
     transitive = true;
   }
 
-# Road Map
+# Road Map (Accepting Pull Requests)
 
 * Improve UX
 * Implement Caching
-* Publishing to Play Store
+* Remove ViewPager. Move code from Fragment to MainActivity itself
 
 # License
 
