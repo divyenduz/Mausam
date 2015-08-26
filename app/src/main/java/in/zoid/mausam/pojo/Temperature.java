@@ -2,11 +2,13 @@ package in.zoid.mausam.pojo;
 
 import org.parceler.Parcel;
 
+import java.io.Serializable;
+
 /**
  * Created by divyendusingh on 8/26/15.
  */
 @Parcel
-public class Temperature {
+public class Temperature implements Serializable{
     Float min;
     Float max;
 

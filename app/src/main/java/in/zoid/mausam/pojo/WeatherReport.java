@@ -2,11 +2,13 @@ package in.zoid.mausam.pojo;
 
 import org.parceler.Parcel;
 
+import java.io.Serializable;
+
 /**
  * Created by divyendusingh on 8/26/15.
  */
 @Parcel
-public class WeatherReport {
+public class WeatherReport implements Serializable {
     Long dt;
     Temperature temp;
     Float pressure;

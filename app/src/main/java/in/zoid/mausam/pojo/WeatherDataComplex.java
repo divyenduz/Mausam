@@ -2,13 +2,14 @@ package in.zoid.mausam.pojo;
 
 import org.parceler.Parcel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by divyendusingh on 8/16/15.
  */
 @Parcel
-public class WeatherDataComplex {
+public class WeatherDataComplex implements Serializable{
     City city;
     ArrayList<WeatherReport> list;
 
