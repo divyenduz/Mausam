@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
-import com.firebase.client.Firebase;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
@@ -96,10 +95,6 @@ public class MainActivity extends BaseActivity implements
             public void success(WeatherDataComplex data, Response response) {
                 setTitle("Mausam @" + " " + data.getCity().getName() + " (" + data.getCity().getCountry() + ")");
                 pager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), data));
-
-                Firebase firebase = new Firebase("https://divyenduz.firebaseio.com/");
-                firebase.setValue(data);
-//                firebase.keepSynced(false);
             }
 
             @Override
