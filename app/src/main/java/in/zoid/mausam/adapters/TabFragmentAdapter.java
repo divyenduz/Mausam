@@ -11,9 +11,9 @@ import in.zoid.mausam.pojo.WeatherDataComplex;
  * Created by divyendusingh on 8/2/15.
  */
 public class TabFragmentAdapter extends FragmentPagerAdapter {
-    WeatherDataComplex.WeatherData mData;
+    WeatherDataComplex mData;
 
-    public TabFragmentAdapter(FragmentManager fm, WeatherDataComplex.WeatherData data) {
+    public TabFragmentAdapter(FragmentManager fm, WeatherDataComplex data) {
         super(fm);
         this.mData = data;
     }

@@ -11,5 +11,5 @@ import retrofit.http.Query;
  */
 public interface OpenWeatherMapService {
     @GET("/data/2.5/forecast/daily?mode=json&units=metric&cnt=7&APPID=" + BaseActivity.API_KEY)
-    void getWeatherDataByCityName(@Query("lat") String lat, @Query("lon") String lon, Callback<WeatherDataComplex.WeatherData> data);
+    void getWeatherDataByCityName(@Query("lat") String lat, @Query("lon") String lon, Callback<WeatherDataComplex> data);
 }

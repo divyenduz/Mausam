@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.parceler.Parcels;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import in.zoid.mausam.R;
@@ -21,10 +23,10 @@ public class NowFragment extends Fragment {
 
     LinearLayoutManager mLayoutManager;
 
-    public static NowFragment newInstance(WeatherDataComplex.WeatherData data) {
+    public static NowFragment newInstance(WeatherDataComplex data) {
         NowFragment fragment = new NowFragment();
         Bundle bundle = new Bundle();
-        bundle.putParcelable("data", data);
+        bundle.putParcelable("data", Parcels.wrap(data));
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -38,8 +40,8 @@ public class NowFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_now, container, false);
         ButterKnife.bind(this, view);
 
-        WeatherDataComplex.WeatherData data = getArguments().getParcelable("data");
-        
+        WeatherDataComplex data = Parcels.unwrap(getArguments().getParcelable("data"));
+
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setHasFixedSize(true);

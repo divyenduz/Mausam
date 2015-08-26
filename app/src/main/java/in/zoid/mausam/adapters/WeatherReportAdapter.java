@@ -12,14 +12,15 @@ import java.util.Locale;
 
 import in.zoid.mausam.R;
 import in.zoid.mausam.pojo.WeatherDataComplex;
+import in.zoid.mausam.pojo.WeatherReport;
 
 /**
  * Created by divyendusingh on 8/17/15.
  */
 public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdapter.ViewHolder> {
-    WeatherDataComplex.WeatherData mData;
+    WeatherDataComplex mData;
 
-    public WeatherReportAdapter(WeatherDataComplex.WeatherData data) {
+    public WeatherReportAdapter(WeatherDataComplex data) {
         mData = data;
     }
 
@@ -32,7 +33,7 @@ public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        WeatherDataComplex.WeatherReport report = mData.getList().get(position);
+        WeatherReport report = mData.getList().get(position);
 
         long created = report.getDt();
         SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM", Locale.US);

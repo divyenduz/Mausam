@@ -90,11 +90,15 @@ public class MainActivity extends BaseActivity implements
     }
 
     private void getAPIData(String lat, String lon) {
-        service.getWeatherDataByCityName(lat, lon, new Callback<WeatherDataComplex.WeatherData>() {
+        service.getWeatherDataByCityName(lat, lon, new Callback<WeatherDataComplex>() {
             @Override
-            public void success(WeatherDataComplex.WeatherData data, Response response) {
+            public void success(WeatherDataComplex data, Response response) {
                 setTitle("Mausam @" + " " + data.getCity().getName() + " (" + data.getCity().getCountry() + ")");
                 pager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), data));
+
+//                Firebase firebase = new Firebase("https://divyenduz.firebaseio.com/");
+//                firebase.setValue(data);
+//                firebase.keepSynced(true);
             }
 
             @Override
@@ -107,6 +111,7 @@ public class MainActivity extends BaseActivity implements
     /**
      * GoogleApiClient onConnected() callback. Called when GoogleApiClient is able to connect to
      * respective API
+     *
      * @param bundle N/A
      */
     @Override
