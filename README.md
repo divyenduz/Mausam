@@ -26,9 +26,10 @@ Simple Weather App
 
 # Road Map (Accepting Pull Requests)
 
-* Improve UX
-* Implement Caching
-* Remove ViewPager. Move code from Fragment to MainActivity itself
+* Improve UX [Way to search for a specific city. Using ToolBar + Search button]
+* Implement Caching [Possible by using an ORM with SQLLite or FireBase]
+* Remove ViewPager. Move code from Fragment to MainActivity itself [Not used]
+* Publish the project to play store [Pending failed aim] #Priority
 
 # License
 
