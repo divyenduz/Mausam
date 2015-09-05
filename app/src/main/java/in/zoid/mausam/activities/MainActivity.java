@@ -35,9 +35,9 @@ public class MainActivity extends BaseActivity implements
     private GoogleApiClient mGoogleApiClient;
 
     @Bind(R.id.pager)
-    ViewPager pager;
+    private ViewPager mPager;
 
-    OpenWeatherMapService service;
+    private OpenWeatherMapService mService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity implements
                 .setEndpoint(API_ENDPOINT)
                 .build();
 
-        service = restAdapter.create(OpenWeatherMapService.class);
+        mService = restAdapter.create(OpenWeatherMapService.class);
 
         buildGoogleApiClient();
     }
@@ -90,11 +90,11 @@ public class MainActivity extends BaseActivity implements
     }
 
     private void getAPIData(String lat, String lon) {
-        service.getWeatherDataByCityName(lat, lon, new Callback<WeatherDataComplex>() {
+        mService.getWeatherDataByCityName(lat, lon, new Callback<WeatherDataComplex>() {
             @Override
             public void success(WeatherDataComplex data, Response response) {
                 setTitle("Mausam @" + " " + data.getCity().getName() + " (" + data.getCity().getCountry() + ")");
-                pager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), data));
+                mPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), data));
             }
 
             @Override

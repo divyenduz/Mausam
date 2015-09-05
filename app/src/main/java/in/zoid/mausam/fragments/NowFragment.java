@@ -19,9 +19,9 @@ import in.zoid.mausam.pojo.WeatherDataComplex;
 public class NowFragment extends Fragment {
 
     @Bind(R.id.recycler_view)
-    RecyclerView recyclerView;
+    private RecyclerView mRecyclerView;
 
-    LinearLayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManager;
 
     public static NowFragment newInstance(WeatherDataComplex data) {
         NowFragment fragment = new NowFragment();
@@ -43,11 +43,11 @@ public class NowFragment extends Fragment {
         WeatherDataComplex data = Parcels.unwrap(getArguments().getParcelable("data"));
 
         mLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setHasFixedSize(true);
 
         WeatherReportAdapter adapter = new WeatherReportAdapter(data);
-        recyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(adapter);
 
         return view;
     }

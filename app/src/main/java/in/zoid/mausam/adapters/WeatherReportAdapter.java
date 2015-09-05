@@ -18,7 +18,7 @@ import in.zoid.mausam.pojo.WeatherReport;
  * Created by divyendusingh on 8/17/15.
  */
 public class WeatherReportAdapter extends RecyclerView.Adapter<WeatherReportAdapter.ViewHolder> {
-    WeatherDataComplex mData;
+    private WeatherDataComplex mData;
 
     public WeatherReportAdapter(WeatherDataComplex data) {
         mData = data;
