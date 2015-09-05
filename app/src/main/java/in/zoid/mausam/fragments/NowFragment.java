@@ -19,7 +19,7 @@ import in.zoid.mausam.pojo.WeatherDataComplex;
 public class NowFragment extends Fragment {
 
     @Bind(R.id.recycler_view)
-    private RecyclerView mRecyclerView;
+    RecyclerView mRecyclerView;
 
     private LinearLayoutManager mLayoutManager;
 

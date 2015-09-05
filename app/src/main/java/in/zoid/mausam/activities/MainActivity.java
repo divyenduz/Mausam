@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity implements
     private GoogleApiClient mGoogleApiClient;
 
     @Bind(R.id.pager)
-    private ViewPager mPager;
+    ViewPager mPager;
 
     private OpenWeatherMapService mService;
 
